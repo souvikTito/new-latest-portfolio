@@ -6,23 +6,24 @@ import Layout from "@/components/Layout";
 
 const Resume = () => {
   const resumeUrl = "#"; // Replace with actual resume PDF URL
-  
+
   const personalInfo = {
     name: "Souvik",
     role: "Software Developer II",
-    location: "San Francisco, CA",
-    email: "contact@example.com",
-    phone: "(123) 456-7890",
-    website: "example.com",
+    location: "Bengaluru, India",
+    email: "souvik_tito@outlook.com",
+    phone: "(+91) 9932092539",
+    github: "github.com/souvikTito",
+    website: "indiantruck.in",
     linkedin: "linkedin.com/in/souvik"
   };
-  
+
   const skills = {
     programming: [
       { name: "JavaScript", level: 90 },
+      { name: "Python", level: 89 },
       { name: "TypeScript", level: 85 },
       { name: "Java", level: 80 },
-      { name: "Python", level: 75 },
       { name: "SQL", level: 85 }
     ],
     frontend: [
@@ -35,12 +36,17 @@ const Resume = () => {
       { name: "Spring Boot", level: 85 },
       { name: "Node.js", level: 90 },
       { name: "Express", level: 85 },
+      { name: "Django", level: 80 },
+      { name: "REST APIs", level: 90 },
       { name: "GraphQL", level: 75 }
     ],
     databases: [
       { name: "PostgreSQL", level: 85 },
+      { name: "MySQL", level: 80 },
       { name: "MongoDB", level: 90 },
-      { name: "Redis", level: 80 }
+      { name: "Redis", level: 80 },
+      { name: "Elasticsearch", level: 55 },
+
     ],
     cloud: [
       { name: "AWS", level: 85 },
@@ -53,7 +59,7 @@ const Resume = () => {
       { name: "Jira", level: 85 }
     ],
   };
-  
+
   const experience = [
     {
       role: "Software Developer II",
@@ -78,7 +84,7 @@ const Resume = () => {
       ],
     },
   ];
-  
+
   const education = [
     {
       degree: "Bachelor of Computer Science",
@@ -93,7 +99,7 @@ const Resume = () => {
       details: "Intensive 12-week program focused on modern web development technologies.",
     },
   ];
-  
+
   const certifications = [
     {
       title: "AWS Certified Developer - Associate",
@@ -135,7 +141,7 @@ const Resume = () => {
               </a>
             </Button>
           </div>
-          
+
           {/* Professional Header with Profile */}
           <div className="glass rounded-xl p-8 mb-10 animate-fade-in shadow-lg">
             <div className="md:flex items-start gap-10">
@@ -147,7 +153,7 @@ const Resume = () => {
                     <p className="text-primary text-sm">{personalInfo.role}</p>
                   </div>
                 </div>
-                
+
                 <div className="space-y-3">
                   <div className="flex items-center gap-3">
                     <MapPin className="h-4 w-4 text-primary" />
@@ -177,7 +183,7 @@ const Resume = () => {
                   </div>
                 </div>
               </div>
-              
+
               <div className="md:w-2/3">
                 <div className="mb-6">
                   <h2 className="text-3xl font-bold mb-3 text-gradient">{personalInfo.name}</h2>
@@ -191,7 +197,7 @@ const Resume = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   <div className="bg-primary/5 p-4 rounded-lg text-center shadow-sm">
                     <div className="text-3xl font-bold text-primary mb-1">4+</div>
@@ -209,14 +215,14 @@ const Resume = () => {
               </div>
             </div>
           </div>
-          
+
           {/* Skills with Progress Bars */}
           <div className="glass rounded-xl p-8 mb-10 animate-fade-in shadow-lg">
             <div className="flex items-center mb-8">
               <Star className="h-6 w-6 mr-3 text-primary" />
               <h2 className="text-2xl font-bold">Professional Skills</h2>
             </div>
-            
+
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
               {Object.entries(skills).slice(0, 4).map(([category, items]) => (
                 <div key={category} className="space-y-4">
@@ -236,14 +242,14 @@ const Resume = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Experience Section */}
           <div className="glass rounded-xl p-8 mb-10 animate-fade-in shadow-lg">
             <div className="flex items-center mb-8">
               <Briefcase className="h-6 w-6 mr-3 text-primary" />
               <h2 className="text-2xl font-bold">Work Experience</h2>
             </div>
-            
+
             <div className="space-y-8">
               {experience.map((job, index) => (
                 <div key={index} className="relative pl-6 border-l-2 border-primary/30 pb-8 last:pb-0">
@@ -264,14 +270,14 @@ const Resume = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Education Section */}
           <div className="glass rounded-xl p-8 mb-10 animate-fade-in shadow-lg">
             <div className="flex items-center mb-8">
               <GraduationCap className="h-6 w-6 mr-3 text-primary" />
               <h2 className="text-2xl font-bold">Education</h2>
             </div>
-            
+
             <div className="space-y-8">
               {education.map((edu, index) => (
                 <div key={index} className="relative pl-6 border-l-2 border-primary/30 pb-8 last:pb-0">
@@ -288,22 +294,22 @@ const Resume = () => {
               ))}
             </div>
           </div>
-          
+
           {/* Certifications Section with Images */}
           <div className="glass rounded-xl p-8 animate-fade-in shadow-lg">
             <div className="flex items-center mb-8">
               <Award className="h-6 w-6 mr-3 text-primary" />
               <h2 className="text-2xl font-bold">Certifications & Licenses</h2>
             </div>
-            
+
             <div className="space-y-10">
               {certifications.map((cert, index) => (
                 <div key={index} className="flex flex-col md:flex-row gap-8">
                   <div className="md:w-1/3">
                     <div className="relative">
-                      <img 
-                        src={cert.image} 
-                        alt={`${cert.title} certificate`} 
+                      <img
+                        src={cert.image}
+                        alt={`${cert.title} certificate`}
                         className="w-full h-auto rounded-lg object-cover shadow-md hover:shadow-xl transition-shadow duration-300"
                       />
                       <div className={`absolute top-3 right-3 ${cert.badgeColor} px-3 py-1 rounded-full text-xs font-medium`}>

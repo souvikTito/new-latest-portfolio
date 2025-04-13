@@ -10,11 +10,11 @@ import Layout from "@/components/Layout";
 const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const formRef = useRef<HTMLFormElement>(null);
-  
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       toast.success("Message sent successfully! I'll get back to you soon.");
@@ -22,38 +22,39 @@ const Contact = () => {
       formRef.current?.reset();
     }, 1500);
   };
-  
+
   const contactInfo = [
     {
       icon: <MapPin className="h-5 w-5" />,
       label: "Location",
-      value: "San Francisco, CA",
+      value: "Bengaluru, India",
+      href: "https://www.google.com/search?q=bengaluru&oq=bengaluru&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyDQgCEAAYgwEYsQMYgAQyDQgDEC4YgwEYsQMYgAQyEAgEEAAYgwEYsQMYgAQYigUyBwgFEAAYgAQyBwgGEAAYgAQyBggHEEUYPNIBCDUyMTZqMGo0qAIAsAIA&sourceid=chrome&ie=UTF-8",
     },
     {
       icon: <Mail className="h-5 w-5" />,
       label: "Email",
-      value: "contact@example.com",
-      href: "mailto:contact@example.com",
+      value: "souvik_tito@outlook.com",
+      href: "mailto:souvik_tito@outlook.com",
     },
     {
       icon: <Phone className="h-5 w-5" />,
       label: "Phone",
-      value: "(123) 456-7890",
-      href: "tel:+11234567890",
+      value: "(+91) 9932092539",
+      href: "tel:+919932092539",
     },
   ];
-  
+
   const socialLinks = [
     {
       name: "LinkedIn",
       icon: <Linkedin className="h-5 w-5" />,
-      href: "https://linkedin.com/in/",
+      href: "https://www.linkedin.com/in/souvik-m-89ab7223b/",
       color: "bg-[#0077B5]/10 text-[#0077B5]",
     },
     {
       name: "GitHub",
       icon: <Github className="h-5 w-5" />,
-      href: "https://github.com/",
+      href: "https://github.com/souvikTito",
       color: "bg-[#333]/10 text-[#333] dark:bg-[#eee]/10 dark:text-[#eee]",
     },
     {
@@ -74,12 +75,12 @@ const Contact = () => {
               Have a project in mind or want to discuss potential opportunities? I'd love to hear from you!
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Contact Form */}
             <div className="glass rounded-xl p-6 md:p-8 animate-fade-in">
               <h2 className="heading-md mb-6">Send Me a Message</h2>
-              
+
               <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div className="space-y-2">
@@ -93,7 +94,7 @@ const Contact = () => {
                       required
                     />
                   </div>
-                  
+
                   <div className="space-y-2">
                     <label htmlFor="email" className="text-sm font-medium">
                       Your Email
@@ -107,7 +108,7 @@ const Contact = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div className="space-y-2">
                   <label htmlFor="subject" className="text-sm font-medium">
                     Subject
@@ -119,7 +120,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                
+
                 <div className="space-y-2">
                   <label htmlFor="message" className="text-sm font-medium">
                     Message
@@ -132,7 +133,7 @@ const Contact = () => {
                     required
                   />
                 </div>
-                
+
                 <Button type="submit" disabled={isSubmitting} className="w-full">
                   {isSubmitting ? (
                     "Sending..."
@@ -144,12 +145,12 @@ const Contact = () => {
                 </Button>
               </form>
             </div>
-            
+
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="glass rounded-xl p-6 md:p-8 animate-fade-in delay-100">
                 <h2 className="heading-md mb-6">Contact Information</h2>
-                
+
                 <div className="space-y-6">
                   {contactInfo.map((info, index) => (
                     <div key={index} className="flex items-start">
@@ -173,10 +174,10 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="glass rounded-xl p-6 md:p-8 animate-fade-in delay-200">
                 <h2 className="heading-md mb-6">Connect With Me</h2>
-                
+
                 <div className="space-y-4">
                   {socialLinks.map((link) => (
                     <a
@@ -199,7 +200,7 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-              
+
               <div className="glass rounded-xl p-6 md:p-8 animate-fade-in delay-300">
                 <h2 className="heading-md mb-6">Schedule a Meeting</h2>
                 <p className="mb-4">
