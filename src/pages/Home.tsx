@@ -7,30 +7,30 @@ import { cn } from "@/lib/utils";
 
 const Home = () => {
   const skills = [
-    { 
-      name: "Frontend Development", 
+    {
+      name: "Frontend Development",
       icon: <Code className="h-10 w-10" />,
       description: "Crafting responsive, performant web interfaces"
     },
-    { 
-      name: "Backend Systems", 
+    {
+      name: "Backend Systems",
       icon: <Server className="h-10 w-10" />,
       description: "Designing scalable microservices architectures"
     },
-    { 
-      name: "Database Design", 
+    {
+      name: "Database Design",
       icon: <Database className="h-10 w-10" />,
       description: "Optimizing data models and query performance"
     }
   ];
-  
+
   const featuredProject = {
     title: "E-Commerce Microservices Platform",
     description: "A scalable microservices architecture for modern e-commerce applications with containerized services.",
     tags: ["Java", "Spring Boot", "Docker", "Kubernetes", "MongoDB"],
     image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
   };
-  
+
   const blogPosts = [
     {
       title: "Optimizing Microservices Communication Patterns",
@@ -56,10 +56,10 @@ const Home = () => {
               Hi, I'm <span className="text-gradient">Souvik</span>
             </h1>
             <h2 className="text-2xl font-medium text-muted-foreground">
-              Software Developer II
+              Software Developer & AI/ML Engineer
             </h2>
             <p className="text-lg max-w-md leading-relaxed">
-              Crafting scalable systems & immersive web experiences. 
+              Crafting scalable systems & immersive web experiences.
               Specializing in distributed systems, cloud architecture, and modern web development.
             </p>
             <div className="flex flex-wrap gap-4">
@@ -75,7 +75,7 @@ const Home = () => {
             <div className="aspect-square bg-gradient-to-tr from-primary/10 to-accent/10 rounded-xl flex items-center justify-center">
               <div className="text-center space-y-4">
                 <div className="font-mono text-sm bg-foreground/10 w-fit mx-auto px-3 py-1 rounded-full">
-                  Software Developer II
+                  Software Developer & AI/ML Engineer
                 </div>
                 <div className="text-4xl font-bold">&#123; Souvik &#125;</div>
                 <div className="flex justify-center space-x-2">
@@ -89,23 +89,23 @@ const Home = () => {
             </div>
           </div>
         </div>
-        
-        <a 
-          href="#skills" 
+
+        <a
+          href="#skills"
           className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-muted-foreground hover:text-primary transition-colors group"
           aria-label="Scroll to skills section"
         >
           <ArrowDownCircle className="h-10 w-10 animate-bounce group-hover:text-primary" />
         </a>
       </section>
-      
+
       {/* Skills Section with Enhanced Cards */}
       <section id="skills" className="section bg-gradient-to-br from-muted/10 to-muted/30">
         <div className="container-custom">
           <h2 className="heading-lg text-center mb-12 text-gradient">Core Skills</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {skills.map((skill, index) => (
-              <div 
+              <div
                 key={skill.name}
                 className={cn(
                   "glass rounded-xl p-6 text-center transform transition-all duration-300 hover:scale-105 hover:shadow-xl animate-fade-in",
@@ -122,7 +122,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Featured Project Section */}
       <section className="section">
         <div className="container-custom">
@@ -134,11 +134,11 @@ const Home = () => {
               </Link>
             </Button>
           </div>
-          
+
           <div className="glass rounded-xl overflow-hidden card-hover">
             <div className="md:flex">
               <div className="md:w-1/2">
-                <img 
+                <img
                   src={featuredProject.image}
                   alt={featuredProject.title}
                   className="h-full w-full object-cover transition-transform duration-300 hover:scale-105"
@@ -167,7 +167,7 @@ const Home = () => {
           </div>
         </div>
       </section>
-      
+
       {/* Blog Preview Section */}
       <section className="section bg-gradient-to-br from-muted/10 to-muted/30">
         <div className="container-custom">
@@ -179,10 +179,10 @@ const Home = () => {
               </Link>
             </Button>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {blogPosts.map((post, index) => (
-              <Link 
+              <Link
                 key={post.slug}
                 to={`/blog/${post.slug}`}
                 className={cn(

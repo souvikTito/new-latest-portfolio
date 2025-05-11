@@ -10,12 +10,93 @@ import { cn } from "@/lib/utils";
 const Blog = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [activeTag, setActiveTag] = useState("All");
-  
-  const allTags = ["All", "Java", "React", "Cloud", "DevOps", "Architecture", "Microservices"];
-  
+
+  const allTags = ["All", "Java", "React", "Cloud", "DevOps", "Architecture", "Microservices", "LLM", "SLM", "MLOps", "Agents", "AI", "RAG", "Vector Databases", "AI Safety", "Security", "Deployment", "Edge Computing", "Inference", "Optimization", "Frontend", "Backend"];
+
   const blogPosts = [
+
+
     {
       id: 1,
+      title: "Building Multi-Agent Systems with LangChain and CrewAI",
+      excerpt: "A comprehensive guide to designing collaborative AI agent systems that specialize in different tasks.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "March 15, 2025",
+      tags: ["LLM", "Agents", "AI"],
+      author: "Souvik",
+      slug: "building-multi-agent-systems",
+      image: "https://images.unsplash.com/photo-1677442135136-760c813029fb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
+      id: 2,
+      title: "RAG Systems: Beyond Basic Retrieval for LLMs",
+      excerpt: "Advanced techniques for improving retrieval augmented generation systems with semantic chunking and hybrid search.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "February 22, 2025",
+      tags: ["RAG", "LLM", "Vector Databases"],
+      author: "Souvik",
+      slug: "advanced-rag-systems",
+      image: "https://images.unsplash.com/photo-1618401471353-b98afee0b2eb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+    },
+    {
+      id: 3,
+      title: "Fine-tuning Small Language Models for Production",
+      excerpt: "Strategies for efficiently fine-tuning smaller, more cost-effective LLMs for specific business domains.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "January 10, 2025",
+      tags: ["LLM", "SLM", "MLOps"],
+      author: "Souvik",
+      slug: "fine-tuning-small-language-models",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+    },
+    {
+      id: 4,
+      title: "Building AI-powered React Applications",
+      excerpt: "Integrating modern AI capabilities into React applications for enhanced user experiences.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "December 5, 2024",
+      tags: ["React", "AI", "Frontend"],
+      author: "Souvik",
+      slug: "ai-powered-react-applications",
+      image: "https://images.unsplash.com/photo-1633356122102-3fe601e05bd2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
+    },
+    {
+      id: 5,
+      title: "Efficient LLM Inference on Edge Devices",
+      excerpt: "Optimizing large language models to run efficiently on resource-constrained edge devices.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "November 18, 2024",
+      tags: ["LLM", "Edge Computing", "Inference", "Optimization"],
+      author: "Souvik",
+      slug: "llm-inference-edge-devices",
+      image: "https://images.unsplash.com/photo-1585909695284-32d2985ac9c0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    },
+    {
+      id: 6,
+      title: "Secure LLM Deployments: Protecting Against Prompt Injection",
+      excerpt: "Essential security measures for protecting your LLM applications from prompt injection and other attacks.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "October 30, 2024",
+      tags: ["LLM", "Security", "AI Safety", "Deployment"],
+      author: "Souvik",
+      slug: "secure-llm-deployments",
+      image: "https://images.unsplash.com/photo-1618044619888-009e412ff12a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80",
+    },
+    {
+      id: 7,
+      title: "Vector Databases: Choosing the Right Solution for Your RAG System",
+      excerpt: "A comparison of popular vector databases for building efficient and scalable retrieval augmented generation systems.",
+      content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+      date: "October 5, 2024",
+      tags: ["RAG", "Vector Databases", "AI", "Database"],
+      author: "Souvik",
+      slug: "vector-databases-rag-systems",
+      image: "https://images.unsplash.com/photo-1489875347897-49f64b51c1f8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80",
+    },
+
+
+    {
+      id: 8,
       title: "Optimizing Microservices Communication Patterns",
       excerpt: "Learn the best practices for efficient inter-service communication in distributed systems.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -26,7 +107,7 @@ const Blog = () => {
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
     },
     {
-      id: 2,
+      id: 9,
       title: "CI/CD Pipelines for Modern Web Applications",
       excerpt: "A comprehensive guide to setting up continuous integration and deployment workflows.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -37,7 +118,7 @@ const Blog = () => {
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
     },
     {
-      id: 3,
+      id: 10,
       title: "State Management Patterns in React Applications",
       excerpt: "Comparing different state management solutions for modern React applications.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -48,7 +129,7 @@ const Blog = () => {
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
     },
     {
-      id: 4,
+      id: 11,
       title: "Effective Error Handling in Java Microservices",
       excerpt: "Best practices for handling errors and exceptions in Java-based microservices.",
       content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -58,11 +139,12 @@ const Blog = () => {
       slug: "error-handling-java-microservices",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2072&q=80",
     },
+
   ];
-  
+
   const filteredPosts = blogPosts.filter((post) => {
-    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) || 
-                         post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = post.title.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      post.excerpt.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesTag = activeTag === "All" || post.tags.includes(activeTag);
     return matchesSearch && matchesTag;
   });
@@ -77,7 +159,7 @@ const Blog = () => {
               Insights, tutorials, and thoughts on software development and technology.
             </p>
           </div>
-          
+
           <div className="flex flex-col md:flex-row gap-8 mb-12">
             {/* Search and filters sidebar */}
             <div className="md:w-1/4">
@@ -94,7 +176,7 @@ const Blog = () => {
                     />
                   </div>
                 </div>
-                
+
                 <div>
                   <h3 className="font-semibold mb-3">Topics</h3>
                   <div className="flex flex-wrap gap-2">
@@ -113,7 +195,7 @@ const Blog = () => {
                 </div>
               </div>
             </div>
-            
+
             {/* Blog posts grid */}
             <div className="md:w-3/4">
               {filteredPosts.length > 0 ? (
@@ -129,8 +211,8 @@ const Blog = () => {
                     >
                       <div className="md:flex">
                         <div className="md:w-1/3">
-                          <img 
-                            src={post.image} 
+                          <img
+                            src={post.image}
                             alt={post.title}
                             className="h-48 md:h-full w-full object-cover"
                           />

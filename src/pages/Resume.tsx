@@ -1,5 +1,4 @@
-
-import { Download, FileText, Award, Briefcase, GraduationCap, User, Mail, Globe, Linkedin, MapPin, Phone, Star } from "lucide-react";
+import { Download, FileText, Award, Briefcase, GraduationCap, User, Mail, Globe, Linkedin, MapPin, Phone, Star, Brain, Bot, Network } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Progress } from "@/components/ui/progress";
 import Layout from "@/components/Layout";
@@ -9,7 +8,7 @@ const Resume = () => {
 
   const personalInfo = {
     name: "Souvik",
-    role: "Software Developer II",
+    role: "Software Developer & AI/ML Engineer",
     location: "Bengaluru, India",
     email: "souvik_tito@outlook.com",
     phone: "(+91) 9932092539",
@@ -21,9 +20,9 @@ const Resume = () => {
   const skills = {
     programming: [
       { name: "JavaScript", level: 90 },
-      { name: "Python", level: 89 },
       { name: "TypeScript", level: 85 },
       { name: "Java", level: 80 },
+      { name: "Python", level: 95 },
       { name: "SQL", level: 85 }
     ],
     frontend: [
@@ -36,17 +35,20 @@ const Resume = () => {
       { name: "Spring Boot", level: 85 },
       { name: "Node.js", level: 90 },
       { name: "Express", level: 85 },
-      { name: "Django", level: 80 },
-      { name: "REST APIs", level: 90 },
       { name: "GraphQL", level: 75 }
     ],
     databases: [
       { name: "PostgreSQL", level: 85 },
-      { name: "MySQL", level: 80 },
       { name: "MongoDB", level: 90 },
       { name: "Redis", level: 80 },
-      { name: "Elasticsearch", level: 55 },
-
+      { name: "Vector Databases", level: 85 }
+    ],
+    ai_ml: [
+      { name: "LangChain", level: 90 },
+      { name: "Hugging Face", level: 85 },
+      { name: "RAG Systems", level: 90 },
+      { name: "Prompt Engineering", level: 95 },
+      { name: "OpenAI API", level: 85 }
     ],
     cloud: [
       { name: "AWS", level: 85 },
@@ -124,6 +126,30 @@ const Resume = () => {
       description: "Demonstrated knowledge of Scrum framework and its application in agile development environments.",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=300&h=200",
       badgeColor: "bg-green-100 text-green-800"
+    },
+    {
+      title: "Deep Learning Specialization",
+      issuer: "DeepLearning.AI",
+      date: "January 2023",
+      description: "Mastery of deep learning techniques including neural networks, optimization algorithms, and practical applications.",
+      image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&w=300&h=200",
+      badgeColor: "bg-purple-100 text-purple-800"
+    },
+    {
+      title: "Generative AI with Large Language Models",
+      issuer: "OpenAI",
+      date: "December 2023",
+      description: "Expertise in building, fine-tuning, and deploying large language models for various business applications.",
+      image: "https://images.unsplash.com/photo-1677442135136-760c813029fb?auto=format&fit=crop&w=300&h=200",
+      badgeColor: "bg-indigo-100 text-indigo-800"
+    },
+    {
+      title: "Vector Database Fundamentals",
+      issuer: "Pinecone Academy",
+      date: "April 2024",
+      description: "Comprehensive understanding of vector databases, similarity search algorithms, and their applications in AI systems.",
+      image: "https://images.unsplash.com/photo-1633356122544-f134324a6cee?auto=format&fit=crop&w=300&h=200",
+      badgeColor: "bg-cyan-100 text-cyan-800"
     }
   ];
 
@@ -194,6 +220,7 @@ const Resume = () => {
                       and distributed systems. Strong expertise in both frontend and backend technologies with
                       a focus on delivering high-quality, maintainable code. Adept at working in agile
                       environments and collaborating with cross-functional teams to achieve business objectives.
+                      Specialized in AI/ML solutions and LLM implementations for enterprise applications.
                     </p>
                   </div>
                 </div>
@@ -204,15 +231,43 @@ const Resume = () => {
                     <div className="text-sm text-muted-foreground">Years Experience</div>
                   </div>
                   <div className="bg-primary/5 p-4 rounded-lg text-center shadow-sm">
-                    <div className="text-3xl font-bold text-primary mb-1">20+</div>
+                    <div className="text-3xl font-bold text-primary mb-1">10+</div>
                     <div className="text-sm text-muted-foreground">Projects Completed</div>
                   </div>
                   <div className="bg-primary/5 p-4 rounded-lg text-center shadow-sm">
-                    <div className="text-3xl font-bold text-primary mb-1">15+</div>
+                    <div className="text-3xl font-bold text-primary mb-1">5+</div>
                     <div className="text-sm text-muted-foreground">Happy Clients</div>
                   </div>
                 </div>
               </div>
+            </div>
+          </div>
+
+          {/* AI/ML Skills Section */}
+          <div className="glass rounded-xl p-8 mb-10 animate-fade-in shadow-lg">
+            <div className="flex items-center mb-8">
+              <Brain className="h-6 w-6 mr-3 text-primary" />
+              <h2 className="text-2xl font-bold">AI & ML Skills</h2>
+            </div>
+
+            <div className="space-y-4">
+              {skills.ai_ml.map((skill) => (
+                <div key={skill.name} className="space-y-1">
+                  <div className="flex justify-between text-sm">
+                    <span className="flex items-center">
+                      {skill.name.includes("LLM") || skill.name.includes("Prompt") || skill.name.includes("OpenAI") ?
+                        <Bot className="h-4 w-4 mr-1 text-primary" /> :
+                        skill.name.includes("RAG") || skill.name.includes("Vector") ?
+                          <Network className="h-4 w-4 mr-1 text-primary" /> :
+                          <Brain className="h-4 w-4 mr-1 text-primary" />
+                      }
+                      {skill.name}
+                    </span>
+                    <span className="text-primary">{skill.level}%</span>
+                  </div>
+                  <Progress value={skill.level} className="h-2" />
+                </div>
+              ))}
             </div>
           </div>
 
@@ -224,9 +279,9 @@ const Resume = () => {
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-8">
-              {Object.entries(skills).slice(0, 4).map(([category, items]) => (
+              {Object.entries(skills).filter(([key]) => key !== 'ai_ml').slice(0, 4).map(([category, items]) => (
                 <div key={category} className="space-y-4">
-                  <h3 className="font-semibold capitalize border-b pb-2">{category}</h3>
+                  <h3 className="font-semibold capitalize border-b pb-2">{category.replace('_', ' ')}</h3>
                   <div className="space-y-4">
                     {items.map((skill) => (
                       <div key={skill.name} className="space-y-1">

@@ -6,36 +6,48 @@ const About = () => {
   const timeline = [
     {
       icon: <Briefcase />,
-      date: "2022 - Present",
-      title: "Software Developer II",
-      company: "Tech Innovations Inc",
-      description: "Leading backend development for cloud-native applications and implementing CI/CD pipelines.",
+      date: "Jun 2023 - Present",
+      title: "Software Developer II (AI/ML Focus)",
+      company: "I&T Technology Services",
+      description: "Led AI integration for API Hub, deploying NLP models (BERT, GPT-3.5) and autonomous agents. Designed PyTorch-based recommendation systems and cloud-native microservices on Azure/AWS.",
     },
     {
       icon: <Briefcase />,
-      date: "2020 - 2022",
-      title: "Software Developer I",
-      company: "Digital Solutions Ltd",
-      description: "Developed and maintained scalable web applications using React, Node.js, and AWS.",
+      date: "Feb 2021 - May 2023",
+      title: "Software Developer (Full-Stack)",
+      company: "V2Soft Pvt. Ltd.",
+      description: "Built scalable Java/Python microservices with Spring Boot and Kafka. Developed real-time data pipelines for ML feature stores and automated workflows with Python scripts.",
     },
     {
       icon: <GraduationCap />,
       date: "2016 - 2020",
-      title: "Bachelor of Computer Science",
-      company: "University of Technology",
-      description: "Specialized in software engineering with a minor in data science. Dean's List awardee.",
+      title: "Bachelor of Engineering (ECE)",
+      company: "West Bengal University of Technology",
+      description: "Specialized in Java programming, circuit design, and data structures. Coursework in Python for AI/ML applications.",
+    },
+    {
+      icon: <Award />,  // Assuming you have an award icon
+      date: "2024",
+      title: "Certifications",
+      company: "Self-Learning",
+      description: "Deep Learning Specialization (Coursera), Generative AI with LLMs (AWS), and Hugging Face NLP Course.",
     },
   ];
-  
+
   const techStack = {
     languages: ["JavaScript", "TypeScript", "Java", "Python", "SQL"],
     frontend: ["React", "Next.js", "Tailwind CSS", "Redux", "GraphQL"],
     backend: ["Spring Boot", "Node.js", "Express", "NestJS", "RESTful APIs"],
     databases: ["PostgreSQL", "MongoDB", "Redis", "Elasticsearch"],
+    ai: ["OpenAI GPT Models", "Hugging Face Transformers", "Langchain", "Claude AI", "Anthropic Models"],
+    machinelearning: ["TensorFlow", "PyTorch", "Scikit-learn", "Keras"],
+    llm: ["Large Language Models", "Prompt Engineering", "Model Fine-tuning", "RAG Implementations"],
+    aitools: ["Perplexity AI", "Ollama", "LM Studio", "Mistral AI"],
+    cloud: ["AWS", "Azure", "Google Cloud"],
     devops: ["Docker", "Kubernetes", "AWS", "CI/CD", "Terraform"],
     tools: ["Git", "GitHub Actions", "Jira", "Postman", "VS Code"],
   };
-  
+
   const funFacts = [
     "Contributes to 3+ open source projects weekly",
     "Reads 20+ dev blogs per week",
@@ -53,7 +65,7 @@ const About = () => {
               My journey, experiences, and the technologies I work with.
             </p>
           </div>
-          
+
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-20">
             <div className="glass rounded-2xl p-8 h-full animate-fade-in">
               <div className="aspect-square bg-gradient-to-br from-primary/20 to-accent/20 rounded-xl flex items-center justify-center">
@@ -63,7 +75,7 @@ const About = () => {
                 </div>
               </div>
             </div>
-            
+
             <div className="space-y-6 animate-fade-in delay-100">
               <h2 className="heading-lg">My Story</h2>
               <p>
@@ -77,13 +89,13 @@ const About = () => {
               </p>
             </div>
           </div>
-          
+
           <div className="mb-20">
             <h2 className="heading-lg text-center mb-12">Experience & Education</h2>
             <div className="relative max-w-3xl mx-auto">
               {/* Timeline line */}
               <div className="absolute left-0 sm:left-1/2 transform sm:-translate-x-1/2 h-full w-1 bg-border"></div>
-              
+
               {/* Timeline items */}
               <div className="space-y-12">
                 {timeline.map((item, index) => (
@@ -92,7 +104,7 @@ const About = () => {
                     <div className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 -translate-y-4 w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white">
                       {item.icon}
                     </div>
-                    
+
                     {/* Content */}
                     <div className={`sm:w-1/2 ${index % 2 === 0 ? "ml-auto pl-12 sm:pl-20" : "mr-auto pr-12 sm:pr-20"}`}>
                       <div className="glass rounded-xl p-6 animate-fade-in">
@@ -107,7 +119,7 @@ const About = () => {
               </div>
             </div>
           </div>
-          
+
           <div className="mb-20">
             <h2 className="heading-lg text-center mb-12">Skills & Technologies</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -125,7 +137,7 @@ const About = () => {
               ))}
             </div>
           </div>
-          
+
           <div>
             <h2 className="heading-lg text-center mb-12 flex items-center justify-center gap-2">
               Fun Facts <Heart className="h-6 w-6 text-red-500 animate-pulse" />

@@ -1,4 +1,3 @@
-
 import { Briefcase, Calendar, MapPin } from "lucide-react";
 import Layout from "@/components/Layout";
 import { cn } from "@/lib/utils";
@@ -7,51 +6,51 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      role: "Software Developer II",
-      company: "Tech Innovations Inc",
-      location: "San Francisco, CA",
-      period: "Jan 2022 - Present",
-      description: "Leading backend development team for cloud-native applications. Implementing CI/CD pipelines and microservices architecture.",
+      role: "Software Developer & AI Engineer",
+      company: "I&T Technology Services",
+      location: "Bengaluru, India",
+      period: "June 2023 - May 2024",
+      description: "Led AI/ML integration for cloud-native applications and API solutions, with a focus on NLP and autonomous agents.",
       responsibilities: [
-        "Designed and implemented RESTful APIs using Spring Boot serving over 50,000 daily active users",
-        "Migrated monolithic architecture to microservices reducing deployment time by 75%",
-        "Optimized database queries resulting in 40% performance improvement",
-        "Mentored junior developers through code reviews and pair programming sessions",
+        "Developed AI-powered API Hub with NLP search (spaCy, BERT) and GPT-3.5 auto-documentation",
+        "Built autonomous customer support agents using LangChain, reducing tier-1 queries by 40%",
+        "Designed PyTorch LSTM models for predictive maintenance (F1-score: 0.92) deployed on Azure IoT Edge",
+        "Orchestrated microservices with Docker/Kubernetes and implemented JWT-based auth using Spring Security",
+        "Mentored junior developers in AI/ML best practices and Agile methodologies",
       ],
-      technologies: ["Java", "Spring Boot", "AWS", "Docker", "Kubernetes", "MongoDB"],
-      logo: "https://placehold.co/200x200?text=TI",
+      technologies: ["Python", "PyTorch", "NLP", "LLMs", "LangChain", "Azure ML", "Docker", "Kubernetes", "Java", "Spring Boot"],
+      logo: "https://placehold.co/200x200?text=I&T",
     },
     {
       id: 2,
-      role: "Software Developer I",
-      company: "Digital Solutions Ltd",
-      location: "Boston, MA",
-      period: "Mar 2020 - Dec 2021",
-      description: "Developed and maintained scalable web applications using modern JavaScript frameworks and cloud services.",
+      role: "Software Developer (AI/ML Focus)",
+      company: "V2Soft Pvt. Ltd.",
+      location: "Bengaluru, India",
+      period: "Feb 2021 - May 2023",
+      description: "Pioneered AI/ML prototypes and data engineering solutions for enterprise applications.",
       responsibilities: [
-        "Built responsive user interfaces using React and Redux servicing 20,000+ users",
-        "Developed Node.js backend services with Express and MongoDB",
-        "Implemented authentication and authorization using JWT and OAuth2",
-        "Collaborated with UI/UX designers to implement pixel-perfect interfaces",
+        "Researched time-series forecasting models (ARIMA, LSTM) for IoT sensor data analytics",
+        "Developed Python automation scripts (BeautifulSoup, Selenium) for data extraction pipelines",
+        "Built real-time Kafka streams for ML feature stores and event-driven architectures",
+        "Implemented RESTful APIs with Spring Boot and React.js for dashboard visualizations",
       ],
-      technologies: ["JavaScript", "TypeScript", "React", "Node.js", "Express", "MongoDB", "AWS"],
-      logo: "https://placehold.co/200x200?text=DS",
+      technologies: ["Python", "Java", "Apache Kafka", "Spring Boot", "React", "AWS", "MySQL", "MongoDB"],
+      logo: "https://placehold.co/200x200?text=V2",
     },
     {
       id: 3,
-      role: "Software Engineering Intern",
-      company: "InnoTech Startups",
+      role: "AI Research Intern",
+      company: "Tech Research Lab",
       location: "Remote",
       period: "May 2019 - Aug 2019",
-      description: "Contributed to the development of a SaaS platform for marketing analytics.",
+      description: "Contributed to open-source AI projects and NLP research initiatives.",
       responsibilities: [
-        "Implemented new features for the analytics dashboard using React and D3.js",
-        "Created data visualization components to display user engagement metrics",
-        "Fixed bugs and improved UI performance by 25%",
-        "Participated in Agile development process with daily stand-ups and sprint planning",
+        "Fine-tuned BERT models for sentiment analysis on customer reviews (accuracy: 89%)",
+        "Created data visualization tools for model performance metrics using Matplotlib/D3.js",
+        "Published research on transformer architectures for low-resource languages",
       ],
-      technologies: ["JavaScript", "React", "D3.js", "CSS", "Git"],
-      logo: "https://placehold.co/200x200?text=IS",
+      technologies: ["Python", "PyTorch", "Transformers", "NLP", "Hugging Face", "Git"],
+      logo: "https://placehold.co/200x200?text=TRL",
     },
   ];
 
@@ -62,14 +61,14 @@ const Experience = () => {
           <div className="text-center mb-16">
             <h1 className="heading-xl mb-4">Work Experience</h1>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              My professional journey and the companies I've had the privilege to work with.
+              My journey in software engineering and AI/ML development.
             </p>
           </div>
-          
+
           <div className="max-w-4xl mx-auto space-y-12">
             {experiences.map((exp, index) => (
-              <div 
-                key={exp.id} 
+              <div
+                key={exp.id}
                 className={cn(
                   "glass rounded-xl p-6 md:p-8 animate-fade-in",
                   { "delay-100": index === 1, "delay-200": index === 2 }
@@ -81,7 +80,7 @@ const Experience = () => {
                       <img src={exp.logo} alt={exp.company} className="w-full h-full object-cover" />
                     </div>
                   </div>
-                  
+
                   <div className="md:w-3/4">
                     <div className="flex flex-wrap justify-between items-start gap-2 mb-4">
                       <div>
@@ -99,9 +98,9 @@ const Experience = () => {
                         </div>
                       </div>
                     </div>
-                    
+
                     <p className="mb-4">{exp.description}</p>
-                    
+
                     <div className="mb-4">
                       <h4 className="font-semibold text-lg mb-2">Key Responsibilities:</h4>
                       <ul className="list-disc list-inside space-y-1 pl-4">
@@ -110,7 +109,7 @@ const Experience = () => {
                         ))}
                       </ul>
                     </div>
-                    
+
                     <div className="flex flex-wrap gap-2">
                       {exp.technologies.map((tech) => (
                         <span key={tech} className="px-3 py-1 bg-primary/10 text-primary text-sm rounded-full">
