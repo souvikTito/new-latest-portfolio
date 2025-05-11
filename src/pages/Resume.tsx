@@ -64,27 +64,44 @@ const Resume = () => {
 
   const experience = [
     {
-      role: "Software Developer II",
-      company: "Tech Innovations Inc",
-      period: "Jan 2022 - Present",
+      role: "Software Developer",
+      company: "L&T Technology Services | Bengaluru",
+      period: "Jun 2023 - May 2024",
       responsibilities: [
-        "Led backend development team for cloud-native applications",
-        "Implemented CI/CD pipelines and microservices architecture",
-        "Designed and built RESTful APIs using Spring Boot",
-        "Optimized database queries resulting in 40% performance improvement",
+        "Spearheaded architectural design initiatives for projects, optimizing data modeling strategies",
+        "Managed teams and orchestrated microservices implementations in Java, JavaScript, and Python",
+        "Conducted code reviews and Proof of Concept evaluations for emerging technologies",
+        "Collaborated with external partners (Google, AWS) to enhance project outcomes",
+        "Implemented API solutions using Express.js and Spring Boot with Apache APISIX/Apigee",
+        "Deployed applications on Azure using Docker, Kubernetes (AKS), and ARM templates"
       ],
     },
     {
-      role: "Software Developer I",
-      company: "Digital Solutions Ltd",
-      period: "Mar 2020 - Dec 2021",
+      role: "Software Developer",
+      company: "V2Soft Pvt. Ltd. | Bengaluru",
+      period: "Feb 2021 - May 2023",
       responsibilities: [
-        "Developed responsive web applications using React and Redux",
-        "Built Node.js backend services with Express and MongoDB",
-        "Implemented authentication and authorization using JWT",
-        "Collaborated with UI/UX designers for pixel-perfect implementation",
+        "Developed high-quality Java 8 and J2EE applications following industry best practices",
+        "Designed database solutions using MySQL and MongoDB with Hibernate ORM",
+        "Built RESTful APIs and backend services using Spring Boot framework",
+        "Implemented microservices architecture with service discovery mechanisms",
+        "Integrated Apache Kafka for event-driven architecture and real-time data streaming",
+        "Automated deployments using Jenkins and containerized services with Docker"
       ],
     },
+    // {
+    //   role: "API Hub Project Lead",
+    //   company: "L&T Technology Services | Bengaluru",
+    //   period: "2023-2024",
+    //   responsibilities: [
+    //     "Led development of API management platform with 18 team members",
+    //     "Designed data models and schemas using MySQL, MongoDB, and AstraDB",
+    //     "Developed solutions using Java (Spring Boot), Node.js (Express.js), and React.js",
+    //     "Implemented authentication microservices with JWT tokens and Spring Security",
+    //     "Managed cloud deployment on Azure with Kubernetes and Docker containers",
+    //     "Provided technical leadership and mentorship to junior team members"
+    //   ],
+    // }
   ];
 
   const education = [
