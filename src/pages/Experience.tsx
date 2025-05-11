@@ -6,8 +6,8 @@ const Experience = () => {
   const experiences = [
     {
       id: 1,
-      role: "Software Developer & AI Engineer",
-      company: "I&T Technology Services",
+      role: "Software Developer & AI/ML Engineer",
+      company: "L&T Technology Services",
       location: "Bengaluru, India",
       period: "June 2023 - May 2024",
       description: "Led AI/ML integration for cloud-native applications and API solutions, with a focus on NLP and autonomous agents.",
@@ -19,7 +19,7 @@ const Experience = () => {
         "Mentored junior developers in AI/ML best practices and Agile methodologies",
       ],
       technologies: ["Python", "PyTorch", "NLP", "LLMs", "LangChain", "Azure ML", "Docker", "Kubernetes", "Java", "Spring Boot"],
-      logo: "https://placehold.co/200x200?text=I&T",
+      logo: "https://upload.wikimedia.org/wikipedia/commons/6/64/L%26T_Technology_Services_logo.png",
     },
     {
       id: 2,
@@ -35,7 +35,7 @@ const Experience = () => {
         "Implemented RESTful APIs with Spring Boot and React.js for dashboard visualizations",
       ],
       technologies: ["Python", "Java", "Apache Kafka", "Spring Boot", "React", "AWS", "MySQL", "MongoDB"],
-      logo: "https://placehold.co/200x200?text=V2",
+      logo: "https://media.licdn.com/dms/image/v2/D560BAQGUT08FH5ypRA/company-logo_200_200/company-logo_200_200/0/1719258138190/v2soft_logo?e=2147483647&v=beta&t=nDEW4X-7dwWf_jQrUEIczxTSvUdDkQrZblSZlsPK6hg",
     },
     {
       id: 3,
