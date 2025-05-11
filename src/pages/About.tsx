@@ -8,7 +8,7 @@ const About = () => {
       icon: <Briefcase />,
       date: "Jun 2023 - Present",
       title: "Software Developer II (AI/ML Focus)",
-      company: "I&T Technology Services",
+      company: "L&T Technology Services",
       description: "Led AI integration for API Hub, deploying NLP models (BERT, GPT-3.5) and autonomous agents. Designed PyTorch-based recommendation systems and cloud-native microservices on Azure/AWS.",
     },
     {
